@@ -1,0 +1,38 @@
+<% include ../partials/header %>
+
+
+
+
+
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+        <h1>Welcome to new YelpCamp!</h1>
+        <p>View our hand-picked campgrounds</p>
+        <p>
+            <a class="btn btn-prime btn-lg" href="/campgrounds/new">Add new campground</a>
+        </p>
+        </div>
+    </header>
+
+    <div class="row text-center" style="display:flex; flex-wrap:wrap;">
+        <% cg.forEach(function(ele){ 
+        console.log("element "+ele);
+        %>
+        <div class="col-md-3 col-sm-6">
+            <div class="thumbnail"> 
+            <img src= "<%= ele.image %>">
+            <div class="caption">
+                <h4><%= ele.name %></h4>
+            </div>
+            <p>
+                <a href="campgrounds/<%= ele._id %>" class="btn btn-primary">More Info</a>
+            </p>
+            </div>
+        </div>
+        <% }); %>
+    </div>
+
+</div>
+<% include ../partials/footer %>
