@@ -1,6 +1,6 @@
 # YelpCamp
 <h3>A full-stack Node.JS project.</h3>
-<hr/>
+<br/>
 <h3>Technologies Used:</h3>
 <ul>
   <li>HTML</li>
